@@ -7,7 +7,7 @@ on:
     branches: 
       [ master ]
     paths:
-    - '1.22/Dockerfile.c9s/**'
+    - '"./1.22/Dockerfile.c9s"/**'
     - '.github/workflows/simontestconapp2-AutoDeployTrigger-c43ad1f8-805f-41ed-8dd2-28b3a2ab724c.yml'
 
   # Allow mannually trigger 
@@ -36,8 +36,8 @@ jobs:
         with:
           push: true
           tags: simontestcr.azurecr.io/simontestconapp2:${{ github.sha }}
-          file: ./1.22/Dockerfile.c9s/Dockerfile
-          context: ./1.22/Dockerfile.c9s/
+          file: "./1.22/Dockerfile.c9s"/Dockerfile
+          context: "./1.22/Dockerfile.c9s"/
 
 
   deploy:
